@@ -1,1 +1,109 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap");
+
+@import "./assets/webfonts/font-awesome/scss/fontawesome";
+@import "./assets/webfonts/font-awesome/scss/regular";
+@import "./assets/webfonts/font-awesome/scss/light";
+@import "./assets/webfonts/font-awesome/scss/solid";
+@import "./assets/webfonts/font-awesome/scss/brands";
+
+@import "variables.scss";
+@import "~bootstrap/scss/bootstrap";
+
+
+* {
+    font-family: "Montserrat", "Open Sans", sans-serif;
+}
+
+h1 {
+    color: theme-color("secondary");
+    margin-bottom: 20px;
+}
+.far,
+.fal {
+    color: theme-color("primary");
+}
+
+html {
+    font-size: 62.5%;
+    color: rgb(75, 75, 75);
+}
+
+.container-fluid {
+    margin: 80px 0 0 65px;
+    width: calc(100vw - 85px);
+    padding: 10px 30px 40px 30px;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(88, 87, 87, 0.1);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(88, 87, 87, 0.1);
+    box-shadow: 0px 0px 7px 1px rgba(88, 87, 87, 0.1);
+    border-radius: 4px;
+    .card-header {
+        padding: 16px 16px 7px 20px;
+        border-radius: 0;
+        border: 0;
+        background: 0 0;
+        font-size: 1.05rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+    .card-body {
+        padding: 20px;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2rem;
+
+        font-family: "Inter", sans-serif;
+    }
+}
+
+form {
+    .form-group-default {
+        border: 1px solid rgba(33, 33, 33, 0.14);
+        border-radius: 2px;
+        padding-top: 5px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-bottom: 4px;
+        position: relative;
+
+        &.required::after {
+            color: theme-color("danger");
+            content: "*";
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 2px;
+        }
+        label {
+            font-weight: 500;
+        }
+        .fade {
+            opacity: 0.5;
+            font-size: 1.1rem;
+            letter-spacing: normal;
+            font-weight: 500;
+        }
+
+        .form-control {
+            border: none;
+            height: 25px;
+            min-height: 25px;
+            padding: 0;
+            margin-top: -4px;
+            color: #212121;
+            font-size: 1.4rem;
+            font-weight: 500;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        
+    }
+    button{
+        min-height: 35px; 
+     }
+}

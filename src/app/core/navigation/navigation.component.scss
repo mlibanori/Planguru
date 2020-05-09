@@ -1,0 +1,79 @@
+@import "../../../variables";
+.nav-principal {
+    width: 65px;
+    height: calc(100vh - 65px);
+    background-color: white;
+    position: fixed;
+    top: 65px;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+
+    ul {
+        position: relative;
+        margin-top: 70px;
+        z-index: 3;
+        width: 100%;
+        li {
+            width: 100%;
+
+            a {
+                color: black;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                i {
+                    width: 65px;
+                    font-size: 1.7rem;
+                    text-align: center;
+                    flex-shrink: 0;
+                    color: white;
+                    height: 50px;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                }
+                span {
+                    margin-left: 20px;
+                    width: 100%;
+                    overflow: hidden;
+                    justify-items: center;
+                    font-size: 1.1rem;
+                    color: #787993;
+                }
+
+                &:hover {
+                    span {
+                        color: theme-color("primary");
+                    }
+                }
+
+                &.active {
+                    border-right: 2px solid #ffc800;
+                    background-color: rgba(116, 64, 238, 0.1);
+                    i {
+                        background-color: rgba(37, 38, 94, 0.25);
+                        width: 63px;
+                    }
+                    span {
+                        color: theme-color("primary");
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        width: 250px;
+        -webkit-box-shadow: 3px 0px 10px 0px rgba(37, 38, 94, 0.1);
+        -moz-box-shadow: 3px 0px 10px 0px rgba(37, 38, 94, 0.1);
+        box-shadow: 3px 0px 10px 0px rgba(37, 38, 94, 0.1);
+    }
+    .background {
+        width: 65px;
+        height: calc(100vh - 65px);
+        background: theme-color("primary");
+        position: absolute;
+        top: 0px;
+    }
+}

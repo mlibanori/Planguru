@@ -1,0 +1,145 @@
+@import "../../../variables";
+.header-navbar {
+    background-color: rgba(255, 255, 255, 0.74);
+    height: 65px;
+    font-size: 1.6rem;
+    -webkit-box-shadow: 0px 4px 16px 4px rgba(37, 38, 94, 0.04), inset 0px 4px 100px -54px rgba(37, 38, 94, 0.1);
+    -moz-box-shadow: 0px 4px 16px 4px rgba(37, 38, 94, 0.04), inset 0px 4px 100px -54px rgba(37, 38, 94, 0.1);
+    box-shadow: 0px 4px 16px 4px rgba(37, 38, 94, 0.04), inset 0px 4px 100px -54px rgba(37, 38, 94, 0.1);
+    padding: 0;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    justify-content: flex-start;
+
+    .nav-item {
+        height: 65px;
+        line-height: 65px;
+        padding: 0 1.5rem;
+        color: theme-color("secondary");
+        font-size: 1.2rem;
+        border-left: 1px solid #f1f1f5;
+        display: flex;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+
+        &.select-enterprise {    
+            &:hover {
+                background-color: #f5f5f5;
+            }
+
+            .rounded-circle {
+                width: 30px;
+                height: 30px;
+                font-weight: 600;
+                background-color: theme-color("success");
+                justify-content: center;
+                display: flex;
+                color: #ffffff;
+                margin-right: 1rem;
+                font-size: 0.9rem;
+                line-height: 30px;
+            }
+            i {
+                margin-left: 0.4rem;
+            }
+        }
+
+        &.notifications {
+            &:hover {
+                background-color: #f5f5f5;
+            }
+            i {
+                position: relative;
+                &.has-notification::after {
+                    content: "";
+                    position: absolute;
+                    background: #ff7052;
+                    height: 0.6rem;
+                    top: -0.6rem;
+                    left: 1.5rem;
+                    width: 0.6rem;
+                    border-radius: 50%;
+                    -webkit-animation: not-blink 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+                    animation: not-blink 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+                }
+                font-size: 1.7rem;
+            }
+        }
+
+        &.user {
+            transition: 0.5s ease-in-out;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+            p {
+                margin: 0 1rem 0 0;
+                span {
+                    color: theme-color("primary");
+                }
+            }
+            img {
+                width: 3.5rem;
+
+                margin-right: 1rem;
+            }
+        }
+
+        &.search {
+            flex-grow: 1;
+            i {
+                font-size: 1.7rem;
+            }
+            input {
+                margin-left: 0.8rem;
+                background: transparent;
+                border: none;
+                width: 100%;
+                font-size: 1.2rem;
+                &:focus {
+                    box-shadow: none;
+                }
+                &::placeholder {
+                    font-size: 1.2rem;
+                    color: #d0d0d4;
+                }
+            }
+        }
+    }
+
+    .navbar-logo {
+        background: theme-color("secondary");
+        width: 65px;
+        height: 65px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        a {
+            display: flex;
+            img {
+                width: 20px;
+                height: 20px;
+            } //img
+        } //a
+    }
+}
+
+
+@keyframes not-blink {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -8,6 +8,9 @@ import { FormInputDirective } from './form-input.directive';
   declarations: [FormInputDirective],
   imports: [
     CommonModule
+  ],
+  exports:[
+    FormInputDirective
   ]
 })
 export class SharedModule { }

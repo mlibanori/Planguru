@@ -36,11 +36,9 @@ html {
 }
 
 .card {
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    -webkit-box-shadow: 0px 0px 7px 1px rgba(88, 87, 87, 0.1);
-    -moz-box-shadow: 0px 0px 7px 1px rgba(88, 87, 87, 0.1);
-    box-shadow: 0px 0px 7px 1px rgba(88, 87, 87, 0.1);
-    border-radius: 4px;
+    border: 0px solid rgba(0, 0, 0, 0.07);
+
+    border-radius: 8px;
     .card-header {
         padding: 16px 16px 7px 20px;
         border-radius: 0;
@@ -55,20 +53,29 @@ html {
         font-weight: 400;
         font-style: normal;
         font-size: 1.2rem;
-
         font-family: "Inter", sans-serif;
     }
 }
 
 form {
+    label, input, button, select, textarea {
+        font-family: "Inter", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
     .form-group-default {
         border: 1px solid rgba(33, 33, 33, 0.14);
         border-radius: 2px;
-        padding-top: 5px;
-        padding-left: 9px;
-        padding-right: 9px;
-        padding-bottom: 4px;
+        padding: 5px 9px 4px;
         position: relative;
+        cursor: text;
+        transition: all 100ms linear;
+
+        &.focused{
+            border-color: theme-color("primary");;
+        }        
 
         &.required::after {
             color: theme-color("danger");
@@ -79,15 +86,20 @@ form {
             top: 2px;
         }
         label {
-            font-weight: 500;
-        }
-        .fade {
-            opacity: 0.5;
-            font-size: 1.1rem;
-            letter-spacing: normal;
-            font-weight: 500;
-        }
+            line-height: 20px;
+            cursor: text;
+            display: block;
+            color: #4b4b4b;
+            transition: all 150ms cubic-bezier(.4,0,.2,1),color 150ms cubic-bezier(.4,0,.2,1);
 
+            &.fade {
+                opacity: 0.5;
+                font-size: 1.1rem;
+                letter-spacing: normal;
+                
+            }
+        }
+   
         .form-control {
             border: none;
             height: 25px;
@@ -100,8 +112,7 @@ form {
             &:focus {
                 box-shadow: none;
             }
-        }
-        
+        }        
     }
     button{
         min-height: 35px; 

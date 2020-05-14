@@ -2,16 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-import { HeaderComponent } from './header/header.component';
-import { NavigationComponent } from './navigation/navigation.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, NavigationComponent],
+  declarations: [],
   imports: [
     CommonModule
   ],
-  exports:[HeaderComponent, NavigationComponent]
+  exports:[]
 })
 export class CoreModule { }

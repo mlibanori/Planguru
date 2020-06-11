@@ -1,0 +1,37 @@
+<div class="clienteForm" [formGroup]="resource.form.controls.pessoa">
+    <div class="form-row">
+      <div class="col-md-8">
+        <div FormInput class="form-group form-group-default required">
+          <label>Razão Social</label>
+          <input type="text" class="form-control" formControlName="razaoSocial">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div FormInput class="form-group form-group-default required">
+          <label>CNPJ</label>
+          <input type="text" class="form-control" formControlName="cnpj">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-4">
+        <div FormInput class="form-group form-group-default ">
+          <label>Nome Fantasia</label>
+          <input type="text" class="form-control" formControlName="nomeFantasia">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div FormInput class="form-group form-group-default">
+          <label>Inscrição Municipal</label>
+          <input type="text" class="form-control" formControlName="inscricaoMunicipal">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div FormInput class="form-group form-group-default">
+          <label>Inscrição Estadual</label>
+          <input type="text" class="form-control" formControlName="inscricaoEstadual">
+        </div>
+      </div>
+    </div>
+  </div>

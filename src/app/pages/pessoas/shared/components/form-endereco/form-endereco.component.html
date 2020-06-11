@@ -1,0 +1,52 @@
+<div class="enderecoForm" [formGroup]="group">
+    <div class="form-row">
+        <div class="col-md-4">
+            <div FormInput class="form-group form-group-default required">
+                <label>CEP</label>
+                <input type="text" class="form-control" formControlName="cep">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div FormInput class="form-group form-group-default">
+                <label>Localidade</label>
+                <input type="text" class="form-control" formControlName="localidade">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div FormInput class="form-group form-group-default">
+                <label>UF</label>
+                <input type="text" class="form-control" formControlName="uf">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-7">
+            <div FormInput class="form-group form-group-default required">
+                <label>Logradouro</label>
+                <input type="text" class="form-control" formControlName="logradouro">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div FormInput class="form-group form-group-default required">
+                <label>Número</label>
+                <input type="text" class="form-control" formControlName="numero">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-6">
+            <div FormInput class="form-group form-group-default required">
+                <label>Bairro</label>
+                <input type="text" class="form-control" formControlName="bairro">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div FormInput class="form-group form-group-default">
+                <label>Complemento</label>
+                <input type="text" class="form-control" formControlName="complemento">
+            </div>
+        </div>
+    </div>
+</div>
